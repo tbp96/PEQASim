@@ -1,0 +1,7 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PEQA Lab – tiny instance</title><link rel="stylesheet" href="style.css"></head><body>
+<nav><b>PEQA Lab</b><a href="index.html">Simulator</a><a class="on" href="tiny.html">Tiny instance</a></nav>
+<div class="wrap"><aside><h3 style="margin:0">Parameters</h3><div id="params"></div><button id="run">Run brute force</button><button id="reset" class="alt">Reset</button></aside>
+<main><div class="card"><h3 style="margin-top:0">Brute-force check: 3 graders, 3 papers, discrete reports</h3>
+<p class="why">Graders A, B, C own papers 1, 2, 3 and never grade their own. Papers 1–2 are probes (true scores (2.5, 3.0) and (2.0, 3.0)); paper 3 is the only non-probe (true (2.5, 2.0)), graded by A and B and regraded by C. Each paper has 2 questions. A signal = truth + noise from {−1, −½, 0, ½, 1} (probabilities from a discretised normal; effort sets its sd). Grader A picks an <b>effort</b> (low/high) and a <b>shift</b> added to her reports (0 = truthful). All 5⁸ = 390,625 signal profiles are enumerated exactly; B is honest with medium effort. Median uses a phantom report at the prior mean μ.</p>
+<div id="msg" class="bad"></div><div id="out"></div></div></main></div><script src="tiny.js"></script></body></html>

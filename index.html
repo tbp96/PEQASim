@@ -1,0 +1,16 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PEQA Lab – peer grading simulator</title><link rel="stylesheet" href="style.css"></head><body>
+<nav><b>PEQA Lab</b><a class="on" href="index.html">Simulator</a><a href="tiny.html">Tiny instance</a>
+<span style="color:var(--mut)">Peer grading with bias, noise, adversaries and incentives (Chakraborty–Jindal–Nath, PEQA)</span></nav>
+<div class="wrap"><aside><h3 style="margin:0">Parameters</h3><div id="params"></div>
+<button id="reset" class="alt">Reset defaults</button></aside>
+<main><div class="tabs"><button data-t="round" class="on">1 · One round</button><button data-t="acc">2 · Accuracy sweeps</button><button data-t="inc">3 · Incentives</button></div>
+<div id="msg" class="bad"></div>
+<section id="round" class="pane on card"><button id="goRound">Simulate round</button>
+<p class="why">One random round with your parameters. <b>Assignment matrix</b>: rows = graders, columns = papers; red P = probe (graded by staff), blue N = non-probe; a grader never gets her own paper. <b>Estimates</b>: PEQA measures each grader's bias b̂ and reliability τ̂ from her probes only. <b>Scores</b>: the final score of every paper under each mechanism (probe papers get the staff score under PEQA).</p>
+<div id="roundOut"></div></section>
+<section id="acc" class="pane card"><div id="presets"></div><p class="why" id="accWhy">Pick an experiment. Each point is the average of <i>Replications</i> random rounds; RMSE is measured on non-probe papers.</p><canvas id="c1" width="880" height="400"></canvas><div id="accTab"></div></section>
+<section id="inc" class="pane card"><button id="goEpbi">EPBI / EPRM</button><button id="goEq">Best response &amp; equilibrium</button><button id="goComp">Competitive grader</button>
+<p class="why" id="incWhy">Uses the effort-game parameters (left) with all other graders honest and equally precise. The focal grader changes her own bias and reliability.</p>
+<canvas id="c2" width="880" height="380"></canvas><canvas id="c3" width="880" height="380"></canvas><div id="incTxt"></div></section></main></div>
+<script src="sim.js"></script><script src="lab.js"></script></body></html>
